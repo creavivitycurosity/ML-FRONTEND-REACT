@@ -1,0 +1,88 @@
+/* ItemList.css */
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Space between items */
+    margin: 20px; /* Space around the grid */
+  }
+  
+  .item {
+    background-color: #f9f9f9; /* Light background for each item */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Inner padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s; /* Smooth scaling on hover */
+  }
+  
+  .item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Margin around the pagination */
+  }
+  
+  .page-button {
+    background-color: #4CAF50; /* Green background for buttons */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding */
+    margin: 0 5px; /* Space between buttons */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth background transition */
+  }
+  
+  .page-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .page-button:disabled {
+    background-color: #ccc; /* Grey out disabled buttons */
+    cursor: not-allowed; /* Not-allowed cursor */
+  }
+  .add-item {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically (if container height allows) */
+    max-width: 400px; /* Set a maximum width for the form */
+    margin: auto; /* Center the form in the page */
+    padding: 20px; /* Add some padding around the form */
+    border: 1px solid #ddd; /* Optional: add a border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #f9f9f9; /* Light background color */
+  }
+  
+  .add-item input {
+    width: 100%; /* Make inputs full width */
+    padding: 10px; /* Add padding for inputs */
+    margin: 10px 0; /* Space between inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners */
+    transition: border-color 0.3s ease; /* Smooth border color transition */
+  }
+  
+  .add-item input:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  .add-item button {
+    padding: 10px 15px; /* Add padding to button */
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  .add-item button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+  }
+  

@@ -1,0 +1,93 @@
+/* NavBar.css */
+
+.navbar {
+  background-color: #4CAF50; /* Green background */
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+  position: relative; /* Make navbar relative for absolute children */
+}
+
+.navbar:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+.navbar-title {
+  color: white;
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem; /* Space between links */
+  margin-bottom: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f1f1f1; /* Light color on hover */
+}
+
+.search-input {
+  padding: 0.5rem;
+  width: 80%;
+  max-width: 400px; /* Max width for better responsiveness */
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem; /* Reduced margin */
+  z-index: 10; /* Keep input above suggestions */
+}
+
+.suggestions {
+  background-color: #73db5e; /* White background for suggestions */
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 400px; /* Max width for better responsiveness */
+  max-height: 200px; /* Set a maximum height for suggestions */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  position: absolute; /* Position suggestions absolutely */
+  top: calc(100% + 0.5rem); /* Place suggestions below the input */
+  left: 0; /* Align with the left of the input */
+  z-index: 1000; /* Ensure suggestions are on top */
+  display: none; /* Start hidden */
+}
+
+.suggestions.active {
+  display: block; /* Show suggestions when active */
+  left: 34%;
+}
+
+.suggestion-item {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd; /* Separator between items */
+  cursor: pointer; /* Pointer on hover */
+  background-color: powderblue;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none; /* Remove last border */
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
+
+h2, h3 {
+  margin: 0.5rem 0;
+  color: #333; /* Darker text for headings */
+}
